@@ -1,5 +1,16 @@
 <h2>
-<%= @list.id %>. <%= @list.name %>
+<%= @list.name %>
 </h2>
 
-<%= link_to 'Back', lists_path %>
+<br>
+<h3>
+<% counter = 1 %>
+Bookmarks:<br>
+<% @list.bookmarks.each do |bookmark|%>
+
+<%= counter %>. <%= bookmark.comment %>
+<% counter = counter + 1 %>
+<% end %>
+</h3>
+
+<%= link_to 'Back', lists_path %> | <%= link_to 'Add new bookmark', new_list_bookmark_path(@list.id) %>

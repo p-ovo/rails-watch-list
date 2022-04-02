@@ -11,6 +11,18 @@
   </head>
 
   <body>
+
+    <nav class="navbar  navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+      <%= image_tag "popcorn2.png", width: '20%' %>
+      </a>
+      </button>
+      <div class="d-flex">
+          <a class="nav-link" href="/lists">My Lists<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/lists/new">New List</a>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
